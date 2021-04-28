@@ -6,16 +6,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-image: url(2.jpg);
 }
 
 .title {
     font-size: 3rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding-top: 60px;
     padding-bottom: 40px;
     font-weight: bold;
-    color: green;
+    color: palevioletred;
 }
 
 .list {
