@@ -19,10 +19,10 @@
 }
 
 .gridContainer>div {
-    background-color:rgb(153, 34, 127);
+    background-color:pink;
     text-align: left;
     padding: 10px 0;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
 }
 
 .gridContainer>div>input {
@@ -48,7 +48,7 @@
     color: blue;
 }
 .btn{
-    background-color: rgb(20, 18, 163);
+    background-color: green;
     border-radius: 10%;
     border: none;
     color: white;
