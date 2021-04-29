@@ -106,9 +106,9 @@ const admin = ({ token }) => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1><ins>Student Data Edit </ins></h1>
+      <h1><ins>Student Data </ins></h1>
       <div className={styles.form_add}>
-        <h2>Add Students</h2>
+        <h2>Commit Students</h2>
         Name:
         <input
           type="text"

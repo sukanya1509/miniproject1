@@ -75,8 +75,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 10px solid blue;
-  background-color: antiquewhite;
+  border: 10px solid rgb(21, 196, 219);
+  color: #800000;
+  background-image: url(6.jpg);
 }
 .listItem {
   display: flex;
