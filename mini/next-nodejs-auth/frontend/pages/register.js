@@ -66,6 +66,15 @@ export default function Register({ token }) {
                     placeholder="password"
                     onChange={(e) => setPassword(e.target.value)} />
             </div>
+            <div>
+                <b>Confirm-Password:</b>
+            </div>
+            <div>
+                <input type="Confirmpassword"
+                    name="Confirmpassword"
+                    placeholder="Confirmpassword"
+                    onChange={(e) => setConfirmPassword(e.target.value)} />
+            </div>
 
         </div>
     )
@@ -79,6 +88,12 @@ export default function Register({ token }) {
             <div className={styles.container}>
                 <Navbar />
                 <h1>Register</h1>
+                <br />
+            <b>WEICOME TO THE LAND OF CATS </b> 
+            <br /><br />
+                <div className={styles.content}>
+                    {registerForm()}
+                </div>
                 <div><b>Token:</b> {token.substring(0, 15)}...
                 <button
                 className={styles.btn1}
@@ -86,16 +101,10 @@ export default function Register({ token }) {
                         Copy token
                 </button>
                 </div>
-                <br />
-            <b>Status: </b> <i>{status}</i>
-                <br /><br />
-                <div className={styles.content}>
-                    {registerForm()}
-                </div>
 
                 <div>
                     <button className={styles.btn}
-                    onClick={register}>Register</button>
+                    onClick={register}>Register</button><i>{status}</i>
                 </div>
             </div>
         </Layout>

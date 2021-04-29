@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(https://www.bloggang.com/data/polball/picture/1264244274.jpg);
+    background-image: url(3.jpg);
     
 }
 
@@ -20,7 +20,6 @@
 }
 
 .gridContainer>div {
-    background-color:pink;
     text-align: left;
     padding: 10px 0;
     font-size: 1.2rem;
@@ -34,7 +33,7 @@
     font-size: 1.2rem;
 }
 .btucopy {
-    background-color: brown;
+    background-color: #960a96;
     color: aliceblue;
 }
 .btulogin {
@@ -63,11 +62,11 @@
   }
   
   .btn {
-      background-color: green;
+      background-color: #FFC800;
       color: whitesmoke;
       font-size: 1rem;
       margin-top: 10px;
-      border: 2px solid green;
+      border: 2px solid #FF8200;
   }
   .btn:hover{
       background-color: rgb(15, 177, 15);
@@ -91,11 +90,11 @@
   }
   
   .btn1 {
-      background-color: brown;
+      background-color: #DA6EDA;
       color: whitesmoke;
       font-size: 1rem;
       margin-top: 10px;
-      border: 2px solid brown;
+      border: 2px solid #800080;
   }
   .btn1:hover{
       background-color: red;
