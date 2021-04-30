@@ -108,57 +108,57 @@ router.get("/", (req, res, next) => {
 
   let students = {
       list: [
-        { "id": 1, "name": "Sukanya","surname": "Nukaew","major": "CoE" ,"GPA": 2.34 },
-        { "id": 2, "name": "Parichart","surname": "Namyueng","major": "TE" ,"GPA": 2.56 }]
+        { "id": 1, "Ownername": "Sukanya","petsurname": "Cooper","species": "Himalayan cat" ,"age": 3.4 },
+        { "id": 2, "Ownername": "Parichart","petsurname": "Molly","species": "Maine coon" ,"age": 2.6 }]
     }
   
   
   router
-    .route("/students")
+    .route("/pet")
     .get((req, res) => {
-      res.send(students);
+      res.send(pet);
     })
     .post((req, res) => {
       console.log(req.body);
-      let newstudent = {};
-      newstudent.id = students.list.length ? students.list[students.list.length - 1].id + 1 : 1;
-      newstudent.name = req.body.name;
-      newstudent.surname= req.body.surname;
-      newstudent.major = req.body.major;
-      newstudent.GPA= req.body.GPA;
-      students = { list: [...students.list, newstudent] };
-      res.json(students);
+      let newpet = {};
+      newspet.id = pet.list.length ? pet.list[pet.list.length - 1].id + 1 : 1;
+      newpet.ownername = req.body.ownername;
+      newpet.petsurname= req.body.petsurname;
+      newpet.species = req.body.species;
+      newpet.age= req.body.age;
+      pet = { list: [...pet.list, newpet] };
+      res.json(pet);
     });
   
   router
-    .route("/students/:studentid")
+    .route("/pet/:petid")
     .get((req, res) => {
-      let id = students.list.findIndex((item) => +item.id == +req.params.studentid)
-      res.json(students.list[id]);
+      let id = pet.list.findIndex((item) => +item.id == +req.params.petid)
+      res.json(pet.list[id]);
     })
     .put((req, res) => {
-      let id = students.list.findIndex((item) => item.id == +req.params.studentid);
-      students.list[id].name = req.body.name;
-      students.list[id].surname = req.body.surname;
-      students.list[id].major = req.body.major;
-      students.list[id].GPA = req.body.GPA;
-      res.json(students.list);
+      let id = pet.list.findIndex((item) => item.id == +req.params.petid);
+      pet.list[id].ownername = req.body.ownername;
+      pet.list[id].petsurname = req.body.petsurname;
+      pet.list[id].species = req.body.species;
+      pet.list[id].age = req.body.age;
+      res.json(pet.list);
     })
     .delete((req, res) => {
-      students.list = students.list.filter((item) => +item.id !== +req.params.studentid);
-      res.json(students.list);
+      pet.list = pet.list.filter((item) => +item.id !== +req.params.petid);
+      res.json(pet.list);
     });
   
   
-  router.route("/purchase/:studentId")
+  router.route("/purchase/:petId")
   .post((req,res) => {
-    let id = students.list.findIndex((item) => +item.id == +req.params.studentId)
+    let id = pet.list.findIndex((item) => +item.id == +req.params.petId)
     if (id == -1) {
-      res.json({message: "Student not found"})
+      res.json({message: "Pet not found"})
     }
     else {
-      students.list = students.list.filter((item) => +item.id !== +req.params.studentId);
-      res.json(students.list);
+      pet.list = pet.list.filter((item) => +item.id !== +req.params.petId);
+      res.json(pet.list);
     }
   })
 
